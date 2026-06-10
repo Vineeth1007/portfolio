@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-role="ml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — C S Vineeth</title>
+  <meta name="description" content="Projects by C S Vineeth across fraud, cybersecurity, medical imaging, genomics and NLP — each with a live visual of what the system actually does.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="work">
+  <canvas class="scene-bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CSV</span>
+        <span class="brand-text">C S Vineeth</span>
+      </a>
+      <button class="menu-btn" type="button" aria-label="Menu">Menu</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Overview</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-download" data-resume href="resume/CS_Vineeth_ML_Engineer.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 4 5-4"/><path d="M5 21h14"/></svg>
+          <span data-resume-label>Résumé · ML Engineer</span>
+        </a>
+      </nav>
+      <div class="role-switch" role="group" aria-label="View portfolio as">
+        <button data-role="ml" aria-pressed="true">ML Engineer</button>
+        <button data-role="ds" aria-pressed="false">Data Scientist</button>
+        <button data-role="as" aria-pressed="false">Applied Scientist</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="work-intro">
+      <div class="wrap">
+        <div class="floaters" aria-hidden="true">
+          <span class="float-label dim" style="--x:74%;--y:22%;--delay:0.4s;--dur:11s">same&nbsp;work&#8201;<span class="fl-accent">·</span>&#8201;your&nbsp;framing</span>
+        </div>
+        <p class="eyebrow">Selected work</p>
+        <h1>Five domains. <span class="serif-it">Watch what each one does.</span></h1>
+        <p data-when="unlocked">Every project runs a live visual of the actual system — a fraud graph flagging accounts, an intrusion stream, a detector locking onto findings. The lens line under each rewrites itself for the role in the switch above.</p>
+        <p data-when="locked">Every project runs a live visual of the actual system — a fraud graph flagging accounts, an intrusion stream, a detector locking onto findings. Everything below is framed for the <span data-lock-role>ML Engineer</span> role.</p>
+        <div class="mode-bar" style="margin-top:1.6rem;">
+          <span class="label">Viewing as</span>
+          <span class="role-name" data-mode-name>ML Engineer</span>
+          <span class="role-mode" data-mode-mode>Production &amp; serving</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 FRAUD -->
+    <article class="project" style="--proj-accent:#4ea1ff;" data-lens="fraud" data-viz="fraud" data-accent="#4ea1ff" id="fraud">
+      <div class="wrap proj-inner">
+        <div>
+          <div class="p-index"><span class="p-no">01</span><span class="p-tag">Risk intelligence</span></div>
+          <h3>Fraud Detection &amp; Risk Intelligence</h3>
+          <p class="p-desc">Production fraud-scoring over 500K+ transactional and relational records — gradient-boosted and graph models with automated feature construction, class-imbalance handling and calibrated decision thresholds.</p>
+          <div class="p-metrics">
+            <div><div class="v">0.986</div><div class="k">F1 score</div></div>
+            <div><div class="v">+2.3%</div><div class="k">graph catch-rate</div></div>
+            <div><div class="v">500K+</div><div class="k">records scored</div></div>
+          </div>
+          <div class="p-lens"><span class="lens-tag">For your role</span><span class="lens-body"></span></div>
+          <div class="p-stack"><span class="tag">LightGBM</span><span class="tag">XGBoost</span><span class="tag">TabTransformer</span><span class="tag">GNN</span><span class="tag">SHAP</span></div>
+        </div>
+        <figure class="p-figure" data-viz="fraud" data-accent="#4ea1ff">
+          <figcaption>Transaction graph — flagged accounts pulse as risk propagates along money-flow edges.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 02 CYBER -->
+    <article class="project" style="--proj-accent:#5fd0c4;" data-lens="cyber" data-viz="intrusion" data-accent="#5fd0c4" id="cyber">
+      <div class="wrap proj-inner">
+        <div>
+          <div class="p-index"><span class="p-no">02</span><span class="p-tag">Intrusion &amp; anomaly</span></div>
+          <h3>Cybersecurity &amp; IoT Anomaly Detection</h3>
+          <p class="p-desc">Intrusion detection on Edge-IIoTset (211K+ flows, 44 features) plus streaming anomaly detection over 2.2M+ sensor readings using LSTM and Transformer autoencoders with adaptive thresholding.</p>
+          <div class="p-metrics">
+            <div><div class="v">211K+</div><div class="k">flows analysed</div></div>
+            <div><div class="v">221,976</div><div class="k">sequence windows</div></div>
+            <div><div class="v">44</div><div class="k">features ranked</div></div>
+          </div>
+          <div class="p-lens"><span class="lens-tag">For your role</span><span class="lens-body"></span></div>
+          <div class="p-stack"><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">LSTM</span><span class="tag">Transformer AE</span></div>
+        </div>
+        <figure class="p-figure" data-viz="intrusion" data-accent="#5fd0c4">
+          <figcaption>Live network-flow stream — intrusion spikes break the baseline and are flagged in real time.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 03 VISION -->
+    <article class="project" style="--proj-accent:#57c98b;" data-lens="vision" data-viz="vision" data-accent="#57c98b" id="vision">
+      <div class="wrap proj-inner">
+        <div>
+          <div class="p-index"><span class="p-no">03</span><span class="p-tag">Clinical vision</span></div>
+          <h3>Medical Imaging &amp; Computer Vision</h3>
+          <p class="p-desc">YOLO dental-detection with embedding-based similarity matching, plus transfer learning across diabetic-retinopathy grading, osteoporosis, EEG seizure detection and edge-deployed gait analysis.</p>
+          <div class="p-metrics">
+            <div><div class="v">0.9861</div><div class="k">mAP@50</div></div>
+            <div><div class="v">0.9843</div><div class="k">precision</div></div>
+            <div><div class="v">0.9820</div><div class="k">recall</div></div>
+          </div>
+          <div class="p-lens"><span class="lens-tag">For your role</span><span class="lens-body"></span></div>
+          <div class="p-stack"><span class="tag">YOLO</span><span class="tag">CNNs</span><span class="tag">Transfer learning</span><span class="tag">Distillation</span><span class="tag">Embeddings</span></div>
+        </div>
+        <figure class="p-figure" data-viz="vision" data-accent="#57c98b">
+          <figcaption>Detector sweeping a scan field — bounding boxes lock onto findings with confidence scores.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 04 GENOMICS -->
+    <article class="project" style="--proj-accent:#9b86ff;" data-lens="genomics" data-viz="genomics" data-accent="#9b86ff" id="genomics">
+      <div class="wrap proj-inner">
+        <div>
+          <div class="p-index"><span class="p-no">04</span><span class="p-tag">Genomic benchmark</span></div>
+          <h3>Genomic &amp; Biomedical ML</h3>
+          <p class="p-desc">A scalable ClinVar pipeline turning 8.9M raw variants into a clean 637K-variant benchmark, with 54-feature genomic matrices for downstream deep-learning pathogenicity prediction.</p>
+          <div class="p-metrics">
+            <div><div class="v">8.9M</div><div class="k">raw variants</div></div>
+            <div><div class="v">637K</div><div class="k">clean SNVs</div></div>
+            <div><div class="v">54</div><div class="k">features built</div></div>
+          </div>
+          <div class="p-lens"><span class="lens-tag">For your role</span><span class="lens-body"></span></div>
+          <div class="p-stack"><span class="tag">Data pipeline</span><span class="tag">Feature engineering</span><span class="tag">k-mers</span><span class="tag">Imputation</span><span class="tag">Benchmarking</span></div>
+        </div>
+        <figure class="p-figure" data-viz="genomics" data-accent="#9b86ff">
+          <figcaption>Variant stream filtering 8.9M raw records down to a clean 637K benchmark, base by base.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 05 NLP -->
+    <article class="project" style="--proj-accent:#e0a44a;" data-lens="nlp" data-viz="nlp" data-accent="#e0a44a" id="nlp">
+      <div class="wrap proj-inner">
+        <div>
+          <div class="p-index"><span class="p-no">05</span><span class="p-tag">Language &amp; behaviour</span></div>
+          <h3>NLP &amp; Predictive Analytics</h3>
+          <p class="p-desc">Depression-detection models fusing linguistic and psychological features (XLNet, BiLSTM, CNN), plus analysis of 10M+ behavioural learning events to predict engagement and outcome-risk.</p>
+          <div class="p-metrics">
+            <div><div class="v">10M+</div><div class="k">behavioural events</div></div>
+            <div><div class="v">3</div><div class="k">architectures</div></div>
+            <div><div class="v">XLNet</div><div class="k">backbone</div></div>
+          </div>
+          <div class="p-lens"><span class="lens-tag">For your role</span><span class="lens-body"></span></div>
+          <div class="p-stack"><span class="tag">XLNet</span><span class="tag">BiLSTM</span><span class="tag">CNN</span><span class="tag">Feature fusion</span><span class="tag">Bias handling</span></div>
+        </div>
+        <figure class="p-figure" data-viz="nlp" data-accent="#e0a44a">
+          <figcaption>Token stream with attention links lighting between words as sentiment is read.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <section class="contact-band">
+      <div class="wrap">
+        <div class="contact-inner reveal">
+          <div>
+            <span class="eyebrow">Seen enough?</span>
+            <h2>Let's talk about the <span class="serif-it">hard one</span>.</h2>
+            <a class="mail" href="mailto:csvineeth2001@gmail.com">csvineeth2001@gmail.com</a>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="contact.html">Contact details →</a>
+            <a class="btn ghost" data-resume href="resume/CS_Vineeth_ML_Engineer.pdf" download>Download résumé</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© 2026 C S Vineeth · Bengaluru, India</span>
+      <span>
+        <a href="https://www.linkedin.com/in/c-s-vineeth-751b74229/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/Vineeth1007" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="mailto:csvineeth2001@gmail.com">Email</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
