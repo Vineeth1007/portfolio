@@ -311,11 +311,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 
 @media (max-width: 760px) {
-  .menu-btn { display: block; }
+  /* header wraps: brand + menu on row 1, role switch full-width on row 2 */
+  .nav { flex-wrap: wrap; row-gap: 0.6rem; column-gap: 0.75rem; }
+  .menu-btn { display: block; margin-left: auto; min-height: 44px; padding: 0.55rem 0.9rem; }
   .nav-links { position: absolute; top: 100%; left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 0.2rem; margin-left: 0; padding: 0.6rem; background: var(--ink-1); border: 1px solid var(--line-strong); border-radius: 12px; display: none; }
   .nav-links.open { display: flex; }
-  .role-switch { order: 3; margin-left: auto; }
+  .nav-links a { min-height: 44px; display: flex; align-items: center; padding: 0.6rem 0.75rem; }
+  .nav-links a.active::after { bottom: 0.55rem; }
+  /* role switch becomes a full-width segmented control on its own line */
+  .role-switch { order: 3; margin-left: 0; width: 100%; }
   .role-switch::before { display: none; }
+  .role-switch button { flex: 1 1 0; min-width: 0; text-align: center; min-height: 44px; padding: 0.6rem 0.2rem; font-size: clamp(0.5rem, 2.6vw, 0.7rem); letter-spacing: 0; }
   .metric-row { grid-template-columns: repeat(2, 1fr); }
   .metric:nth-child(2) { border-right: 0; }
   .metric:nth-child(1), .metric:nth-child(2) { border-bottom: 1px solid var(--line); }
