@@ -1,0 +1,11 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local tooling (the site has no build step, so none of these are needed)
+node_modules/
